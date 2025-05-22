@@ -3,100 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация на образовательный проект</title>
+    <title>Образовательный проект | Название проекта</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f9f9f9;
             color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #6e48aa, #9d50bb);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 20px auto;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            text-align: center;
-            color: #444;
+        section {
+            margin: 50px 0;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #6e48aa;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: #6e48aa;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #9d50bb;
+            transform: translateY(-2px);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
         }
         .form-group {
             margin-bottom: 20px;
         }
-        label {
+        .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input, textarea {
+        .form-group input, 
+        .form-group textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
         }
-        button {
-            background: #4CAF50;
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: #f0e6ff;
+            border-radius: 8px;
+        }
+        footer {
+            background: #333;
             color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            width: 100%;
-        }
-        button:hover {
-            background: #45a049;
-        }
-        .success {
-            display: none;
-            color: #4CAF50;
             text-align: center;
-            margin-top: 20px;
+            padding: 20px;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Код Будущего в Сочи</h1>
+        <p>Бесплатный федеральный образовательный проект, направленный на развитие современных IT навыков у школьников 8-11 классов.</p>
+        <button class="btn" onclick="openModal()">Оставить заявку</button>
+    </header>
+
     <div class="container">
-        <h1>Заявка на регистрацию</h1>
-        <form id="registrationForm" action="https://formsubmit.co/surgutilya2009@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Новая заявка на регистрацию">
-            <input type="hidden" name="_template" value="table">
+        <section>
+            <h2>О проекте</h2>
+            <p>Бесплатный проект, позволяющий детям развить себя в сфере IT не покидая территорию школы.</p>
             
-            <div class="form-group">
-                <label for="name">ФИО:</label>
-                <input type="text" id="name" name="name" required>
+            <div class="features">
+                <div class="feature">
+                    <h3>Преимущество 1</h3>
+                    <p>Обучение прямо в школе</p>
+                </div>
+                <div class="feature">
+                    <h3>Преимущество 2</h3>
+                    <p>Обучение с использованием дистанционных технологий</p>
+                </div>
+                <div class="feature">
+                    <h3>Преимущество 3</h3>
+                    <p>Общение с опытными преподавателями</p>
+                </div>
             </div>
             
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Комментарий (если есть):</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-            
-            <button type="submit">Отправить заявку</button>
-        </form>
-        
-        <div id="successMessage" class="success">
-            Спасибо! Ваша заявка отправлена. Мы свяжемся с вами в ближайшее время.
+            <button class="btn" onclick="openModal()">Оставить заявку</button>
+        </section>
+
+        <section>
+            <h2>Направления обучения</h2>
+            <ul>
+                <li>Основы программирования на Python</li>
+            </ul>
+            <button class="btn" onclick="openModal()">Записаться сейчас</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>Номер телефона: +79224050353.</p>
+        <p>Whatsapp: +79224050353.</p>
+        <p>Telegram: @AndreyKirieshki.</p>
+        <button class="btn" onclick="openModal()">Оставить заявку</button>
+    </footer>
+
+    <!-- Модальное окно с формой -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Заявка на регистрацию</h2>
+            <form id="registrationForm" action="https://formsubmit.co/surgutilya2009@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Новая заявка на регистрацию">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="name">ФИО родителя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="school">Школа ребенка:</label>
+                    <input type="text" id="school" name="school" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон родителя:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Комментарий (если есть):</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Отправить заявку</button>
+            </form>
         </div>
     </div>
 
     <script>
+        // Функции для модального окна
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Закрытие при клике вне окна
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Обработка формы
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const form = e.target;
@@ -106,12 +234,15 @@
             })
             .then(response => {
                 if (response.ok) {
-                    form.style.display = 'none';
-                    document.getElementById('successMessage').style.display = 'block';
+                    alert('Спасибо! Ваша заявка отправлена.');
                     form.reset();
+                    closeModal();
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                alert('Ошибка отправки. Попробуйте ещё раз.');
+                console.error('Error:', error);
+            });
         });
     </script>
 </body>
