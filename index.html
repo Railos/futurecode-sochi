@@ -318,8 +318,8 @@
         <div class="header-content">
             <h1>Код Будущего в Сочи</h1>
             <p>Бесплатный национальный проект по программированию для учеников 8-11 классов</p>
-            <p>Освой язык Python прямо в школе и получи +5 баллов к ЕГЭ!</p>
-            <button class="btn" onclick="openModal()">Оставить заявку</button>
+            <p>Освой язык Python прямо в школе и получи до +10 баллов к ЕГЭ!</p>
+            <a href="https://forms.gle/MQw9VVpbKpLeGgBm9" class="btn" target="_blank">Оставить заявку</a>
         </div>
     </header>
 
@@ -339,12 +339,12 @@
                 </div>
                 <div class="feature">
                     <h3>Результат гарантирован</h3>
-                    <p>32 занятия, 4 учебных модуля, 8 месяцев обучения. В конце курса ты получишь не только знания, но и +5 баллов к ЕГЭ по информатике!</p>
+                    <p>32 занятия, 4 учебных модуля, 8 месяцев обучения. В конце курса ты получишь не только знания, но и до 10 баллов к ЕГЭ по информатике!</p>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 30px;">
-                <button class="btn" onclick="openModal()">Записаться на курс</button>
+                <a href="https://forms.gle/MQw9VVpbKpLeGgBm9" class="btn" target="_blank">Записаться на курс</a>
             </div>
         </section>
 
@@ -362,17 +362,17 @@
                     <p>Условия, циклы, функции. Учим программы принимать решения и выполнять сложные задачи.</p>
                 </div>
                 <div class="program-card">
-                    <h3>Модуль 3: Работа с данными</h3>
-                    <p>Списки, словари, файлы. Обработка и анализ информации - основа программирования.</p>
+                    <h3>Модуль 3: Функциональное программирование</h3>
+                    <p>Учимся разделять программу на модули. Создание первых проектов</p>
                 </div>
                 <div class="program-card">
-                    <h3>Модуль 4: Практические проекты</h3>
-                    <p>Создаем реальные приложения: игры, боты, анализ данных. Подготовка к ЕГЭ по информатике.</p>
+                    <h3>Модуль 4: Практический проект</h3>
+                    <p>Знакомство с увлекательным графическим модулем. Создание собственного проекта.</p>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 20px;">
-                <button class="btn" onclick="openModal()">Узнать подробнее о программе</button>
+                <a href="https://forms.gle/MQw9VVpbKpLeGgBm9" class="btn" target="_blank">Узнать подробнее о программе</a>
             </div>
         </section>
 
@@ -389,11 +389,11 @@
             
             <div class="guarantee">
                 <h3>Ваш результат после курса:</h3>
-                <p>Уверенные навыки программирования на Python + дополнительные 5 баллов к ЕГЭ по информатике!</p>
+                <p>Уверенные навыки программирования на Python + дополнительные баллы к ЕГЭ по информатике!</p>
             </div>
             
             <div style="text-align: center; margin-top: 20px;">
-                <button class="btn" onclick="openModal()">Начать обучение бесплатно</button>
+                <a href="https://forms.gle/MQw9VVpbKpLeGgBm9" class="btn" target="_blank">Начать обучение бесплатно</a>
             </div>
         </section>
 
@@ -420,7 +420,7 @@
             </div>
             
             <div style="text-align: center; margin-top: 30px;">
-                <button class="btn" onclick="openModal()">Оставить заявку сейчас</button>
+                <a href="https://forms.gle/MQw9VVpbKpLeGgBm9" class="btn" target="_blank">Оставить заявку сейчас</a>
             </div>
         </section>
     </div>
@@ -436,105 +436,8 @@
                 <div class="partner-badge">Федеральная программа</div>
             </div>
             
-            <button class="btn btn-secondary" onclick="openModal()">Получить бесплатное обучение</button>
+            <a href="https://forms.gle/MQw9VVpbKpLeGgBm9" class="btn btn-secondary" target="_blank">Получить бесплатное обучение</a>
         </div>
     </footer>
-
-    <!-- Модальное окно с формой -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Заявка на регистрацию</h2>
-            <p>Заполните форму, чтобы записаться на бесплатный курс программирования</p>
-            <form id="registrationForm" action="https://formsubmit.co/surgutilya2009@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="Новая заявка на Код Будущего">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
-                
-                <div class="form-group">
-                    <label for="name">ФИО ученика:</label>
-                    <input type="text" id="name" name="name" required placeholder="Иванов Иван Иванович">
-                </div>
-                
-                <div class="form-group">
-                    <label for="school">Школа и класс:</label>
-                    <input type="text" id="school" name="school" required placeholder="Школа №, 9 класс">
-                </div>
-                
-                <div class="form-group">
-                    <label for="parent_name">ФИО родителя:</label>
-                    <input type="text" id="parent_name" name="parent_name" required placeholder="Петрова Мария Сергеевна">
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Телефон для связи:</label>
-                    <input type="tel" id="phone" name="phone" required placeholder="+7 (999) 123-45-67">
-                </div>
-                
-                <button type="submit" class="btn">Отправить заявку</button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        // Функции для модального окна
-        function openModal() {
-            document.getElementById('modal').style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Блокируем прокрутку фона
-        }
-        function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Возвращаем прокрутку
-        }
-
-        // Закрытие при клике вне окна
-        window.onclick = function(event) {
-            const modal = document.getElementById('modal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-
-        // Обработка формы
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = e.target;
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.textContent;
-            
-            // Показываем загрузку
-            submitBtn.textContent = 'Отправка...';
-            submitBtn.disabled = true;
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form)
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Успешная отправка
-                    submitBtn.textContent = '✓ Отправлено!';
-                    submitBtn.style.backgroundColor = '#10b981';
-                    
-                    // Чистим форму и закрываем модалку через 1.5 секунды
-                    setTimeout(() => {
-                        form.reset();
-                        closeModal();
-                        submitBtn.textContent = originalBtnText;
-                        submitBtn.disabled = false;
-                        submitBtn.style.backgroundColor = '';
-                    }, 1500);
-                } else {
-                    throw new Error('Ошибка сети');
-                }
-            })
-            .catch(error => {
-                alert('Ошибка отправки. Пожалуйста, попробуйте ещё раз или свяжитесь с нами по телефону.');
-                submitBtn.textContent = originalBtnText;
-                submitBtn.disabled = false;
-                console.error('Error:', error);
-            });
-        });
-    </script>
 </body>
 </html>
